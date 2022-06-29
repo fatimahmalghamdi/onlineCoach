@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v6 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% load static %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+		<style>
+			/* .my_color {
+				background-color: lightgrey !important;
+				margin-bottom: auto !important;
+			}
+			.btn_style {
+				background-color: lightblue !important;
+				border-radius: 5px;
+				padding: 7px 40px;
+				/* background-image: linear-gradient(to right, lightblue, lightpink); */
+				/* font-weight: bold;
+			} */ 
+
+			h3 {
+				text-align: left !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+		<div class="alert alert-{{ message.tags }}">{{ message }}</div>
+		{% endfor %}
+		{% endif %}
+        <nav class="navbar navbar-dark bg-dark mb-5 my_color">
+			<div class="container-fluid">
+				<a class="navbar-brand">
+					<h1>Online Coach</h1>
+				</a>
+				<div class="d-flex">
+					<h4 class="c2 me-3">Welcome</h4>
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-menu-up"
+						viewBox="0 0 16 16">
+						<path
+							d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z" />
+					</svg>
+				</div>
+			</div>
+		</nav>
+		<div class="container-sm text-center">
+			{% block content %}
+			{% endblock %}
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"></script>
+
+		<div class="wrapper">
+			<div class="inner">
+				<div class="image-holder">
+					<img src="{% static 'images/registration-form-6.jpg' %}" alt="">
+				</div>
+				<form method="post" action="/mainPage/login">
+                    {% csrf_token %}
+					<h3>LogIn</h3>
+					<div class="form-row my_row">
+						<input type="email" class="form-control" placeholder="Email" name="email">
+                        <input type="password" class="form-control" placeholder="Password" name="password">
+					</div>
+					<div class="form-row my_row">
+						<input type="submit" name="login" class="btn_style" value="LogIn">
+						<!-- <div class="col"></div>
+						<div class="col"></div>
+						<div class="col">
+						</div>
+						<div class="col"> -->
+
+						<!-- </div> -->
+						<!-- <button>SignUp as Coach<i class="zmdi zmdi-long-arrow-right"></i></button> -->
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/main.js"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

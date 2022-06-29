@@ -1,0 +1,125 @@
+.b1 {
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    box-shadow: 2px 2px black;
+    background-color: steelblue;
+    height: 50px;
+}
+
+.c1 {
+    color: steelblue;
+}
+
+.c2 {
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.active {
+    color: black !important;
+}
+
+.my_color {
+    background-color: lightgrey !important;
+    margin-bottom: auto !important;
+}
+
+.main_body {
+    margin: 30px auto;
+    width: 1100px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px !important;
+}
+
+
+.rl_con_top {
+    background-color: white !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 15px 15px !important;
+}
+.no_con_top {
+    border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 15px 15px !important;
+}
+
+.enter_btn_style {
+    background-color: lightblue !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.my_img {
+    width: 100px;
+}
+.card {
+    margin-bottom: 15px !important;
+}
+.my_width {
+    width: 300px !important;
+}
+
+.myForm {
+    transform:none !important;
+    padding-top: 0px !important;
+}
+.card {
+    --bs-card-spacer-y: 0 !important;
+}
+.row2 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.row1 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.my_center {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 8px !important;
+}
+
+h4 {
+    font-family: "ElMessiri-SemiBold.ttf";
+    text-align: center;
+}
+h3 {
+    white-space: nowrap;
+    text-align: left !important;
+}
+.finally {
+    margin-right: 30px;
+    
+}
+
+.btn_style {
+    background-color: lightblue !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.my_color {
+    background-color: lightgrey !important;
+    margin-bottom: auto !important;
+}
+
+.my_row {
+    display: block !important;
+    margin-bottom: auto !important;
+}

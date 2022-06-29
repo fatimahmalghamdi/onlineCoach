@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RegistrationForm_v6 by Colorlib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet"
+        href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+    <style>
+        .mypage_container {
+            background-image: url("static/images/bg-registration-form-6.jpg") !important;
+            }
+    </style>
+</head>
+
+<body class="mypage_container">
+    <nav class="navbar navbar-dark bg-dark mb-5 my_color">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <h1>Online Coach</h1>
+            </a>
+            <div class="d-flex">
+                <h4 class="c2 me-3">Welcome</h4>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" class="bi bi-menu-up"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793l1.853 1.854zM1 9V6h14v3H1zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2h14zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v2zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5z" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+    <div class="container-sm text-center">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+    <div class="main_body">
+        <div class="finally">
+
+            <div id="top_half">
+                <div class="row align-items-center row1">
+                    <div class="col-5 left_s">
+                        <div class="row no_con_top">
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-6">
+                                    <h3>Onlone Coach</h3>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h4>There are alot of 6 undeniable benefits of Online Training </h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col">
+                                    <ul>
+                                        <li>It's more flexible</li>
+                                        <li>Communication is easy</li>
+                                        <li>You get professional advice</li>
+                                        <li>You get attention and motivation</li>
+                                        <li>It's more affordable</li>
+                                    </ul>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-2 right_s">
+                        <div class="row"></div>
+                    </div>
+                    <!-- ////////////////////////////////////////////////////////// -->
+                    <div class="col-5 right_s">
+                        <div class="row rl_con_top">
+                            <div class="row">
+                                <div class="col">
+                                    <h3>Start Your Training</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col">
+                                    <form method="get" action="/mainPage/registration" class="myForm">
+                                        {% csrf_token %}
+                                        <button type="submit" class="enter_btn_style">SignUp Now</button>
+                                    </form>
+                                </div>
+                                <div class="col"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-4 align-self-center"><p class="my_center">Already have an account</p></div>
+                                <div class="col-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col align-self-center">
+                                    <form method="get" action="/mainPage/login" class="myForm">
+                                        {% csrf_token %}
+                                        <button type="submit" class="enter_btn_style">SignIn Here</button>
+                                    </form>
+                                </div>
+                                <div class="col"></div> 
+                            </div>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+        <div id="bottom_half">
+            <div class="row align-items-center row1">
+                <!-- row 1 -->
+                <div class="row align-items-center row1">
+                    <div class="col-4">
+                        <h3>Onlone Coach</h3>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-4"></div>
+                </div>
+                <!-- row 2 -->
+                <div class="row align-items-center row1">
+                    <div class="col my_width">
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="{% static 'images/new_img.jpg' %}" class="card-img-top my_img" alt="The new img">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col my_width">
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="{% static 'images/new_img.jpg' %}" class="card-img-top my_img" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col my_width">
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="{% static 'images/new_img.jpg' %}" class="card-img-top my_img" alt="The new img">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col my_width">
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="{% static 'images/new_img.jpg' %}" class="card-img-top my_img" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
